@@ -53,11 +53,8 @@ class MainWindow(QtWidgets.QMainWindow, program.Ui_MainWindow):
                 if result in rules_dictionary:
                     self.output_check.append(result + ' -> {}'.format(rules_dictionary.get(result)))
                     new_regex.remove(new_regex[new_regex.index(el) + 1])
-                    print('1')
-                print(el)
-            elif el not in rules_dictionary and new_regex[new_regex.index(el) - 1] != ("\\" + el):
+            elif el not in rules_dictionary and new_regex[new_regex.index(el) - 1] != ("\\"):
                 self.output_check.append(el + '-> {}'.format('just find all occurrences of this symbol in the text'))
-                print('2')
             elif el in rules_dictionary:
                 self.output_check.append(el + '-> {}'.format(rules_dictionary.get(el)))
             elif el == '[':
