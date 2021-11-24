@@ -1,0 +1,1 @@
+pyuic5.exe -x C:\Users\Nos\PycharmProjects\pythonProject\rules.ui -o C:\Users\Nos\PycharmProjects\pythonProject\rules.py

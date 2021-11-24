@@ -1,0 +1,1 @@
+pyuic5.exe -x C:\Users\Nos\PycharmProjects\pythonProject\program.ui -o C:\Users\Nos\PycharmProjects\pythonProject\program.py
