@@ -72,9 +72,10 @@ class MainWindow(QtWidgets.QMainWindow, program.Ui_MainWindow):
 
     def text_open(self):
         filename = QFileDialog.getOpenFileName(self, 'Save file', os.getenv('HOME'))
-        with open(filename[0], 'r') as f:
-            file = f.read()
-            self.input_text.setText(file)
+        if not filename[0] == "":
+            with open(filename[0], 'r') as f:
+                file = f.read()
+                self.input_text.setText(file)
 
     def delete_text(self):
         self.input_text.clear()
@@ -93,9 +94,10 @@ class MainWindow(QtWidgets.QMainWindow, program.Ui_MainWindow):
 
     def save_matches(self):
         filename = QFileDialog.getSaveFileName(self, 'Save file', os.getenv('HOME'))
-        with open(filename[0], 'w') as f:
-            my_text = self.output_regex.toPlainText()
-            f.write(my_text)
+        if not filename[0] == "":
+            with open(filename[0], 'w') as f:
+                my_text = self.output_regex.toPlainText()
+                f.write(my_text)
 
 
 def main():
